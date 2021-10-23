@@ -1,0 +1,16 @@
+{
+  "name": "cy-giphy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "Zorigto Sambuev",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.6.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
