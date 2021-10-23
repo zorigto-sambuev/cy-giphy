@@ -15,4 +15,16 @@ describe('Auth', function (){
         LoginPage.login('invalid@example.com', 'qwerty123');
         LoginPage.notification.should('contain.text', 'Your email address was not recognized or your password was incorrect.');
     });
+
+    it('email format validation', function() {
+        LoginPage.inputEmail.type('invalid');
+        LoginPage.inputPassword.click();
+        LoginPage.emailValidation.should('be.visible');
+    });
+
+    it('password format validation', function() {
+        LoginPage.inputPassword.type('q');
+        LoginPage.inputEmail.click();
+        LoginPage.passwordlValidation.should('be.visible');
+    });
 })
