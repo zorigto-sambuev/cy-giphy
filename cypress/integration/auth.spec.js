@@ -25,6 +25,6 @@ describe('Auth', function (){
     it('password format validation', function() {
         LoginPage.inputPassword.type('q');
         LoginPage.inputEmail.click();
-        LoginPage.passwordlValidation.should('be.visible');
+        LoginPage.passwordValidation.should('be.visible');
     });
 })
