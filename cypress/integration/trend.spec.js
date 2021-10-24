@@ -13,6 +13,10 @@ describe('TrendSection', function (){
         MainPage.searcher.should('be.visible');
     });
     it('can type text into search field', function () {
+        MainPage.searcher.type('birthday')
+        MainPage.searcher.should('have.value','birthday')
+    });
+    it('typed text is matched searcher page', function () {
         MainPage.typeSearch('birthday')
         SearchPage.searchHeader.should('be.visible');
     });
