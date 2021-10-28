@@ -30,7 +30,6 @@ describe('TrendSection', function (){
     it('click on a gif in trending section 2', function () {
         MainPage.findGif();
         MainPage.shareLink.click();
-        // cy.wait(1000)
         MainPage.shareButton.click()
         cy.window().its('navigator.clipboard').invoke('readText')
             .then(text => {
