@@ -1,6 +1,8 @@
 import MainPage from '../pages/main.page';
 import SearchPage from '../pages/searcher.page';
 import LinkedPage from '../pages/linked.page';
+// import clipboard from "clipboardy";
+import clipboard from 'clipboard';
 
 describe('TrendSection', function (){
     beforeEach(function (){
@@ -24,4 +26,18 @@ describe('TrendSection', function (){
         MainPage.findGif();
         LinkedPage.linkedGif.should('be.visible');
     });
-});
+
+    it('click on a gif in trending section 2', function () {
+        MainPage.findGif();
+        MainPage.shareLink.click();
+        // cy.wait(1000)
+        MainPage.shareButton.click()
+        cy.window().its('navigator.clipboard').invoke('readText')
+            .then(text => {
+                cy.wrap(text)
+                cy.visit(text)
+            })
+    });
+
+})
+
