@@ -1,8 +1,6 @@
 import MainPage from '../pages/main.page';
 import SearchPage from '../pages/searcher.page';
 import LinkedPage from '../pages/linked.page';
-// import clipboard from "clipboardy";
-import clipboard from 'clipboard';
 
 describe('TrendSection', function (){
     beforeEach(function (){
