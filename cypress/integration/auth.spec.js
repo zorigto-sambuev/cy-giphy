@@ -13,7 +13,7 @@ describe('Auth', function (){
 
     it('wrong credentials throws error', function() {
         LoginPage.login('invalid@example.com', 'qwerty123');
-        LoginPage.notification.should('contain.text', 'Your email address was not recognized or your password was incorrect.');
+        LoginPage.notification.should('contain.text', 'Incorrect authentication credentials.');
     });
 
     it('email format validation', function() {

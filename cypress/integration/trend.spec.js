@@ -27,7 +27,7 @@ describe('TrendSection', function (){
         LinkedPage.linkedGif.should('be.visible');
     });
 
-    it('click on a gif in trending section 2', function () {
+    it('visit the link of the chosen gif in the trending section', function () {
         MainPage.findGif();
         MainPage.shareLink.click();
         MainPage.shareButton.click()

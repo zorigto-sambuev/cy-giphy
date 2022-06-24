@@ -1,7 +1,7 @@
 import Page from "./page";
 
 class SearchPage extends Page {
-    get searchHeader() { return cy.xpath('//h1[@class="sc-bYwzba Title-sc-jgn010 cYmwOA kDbeTS"]') }
+    get searchHeader() { return cy.xpath('//div[@class="Container-sc-1htr2ct hSyQIn"]') }
 
     open() {
         return super.open('/');
