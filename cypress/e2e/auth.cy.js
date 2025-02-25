@@ -1,5 +1,6 @@
 import LoginPage from '../pages/login.page';
 import ProfilePage from '../pages/profile.page'
+require('dotenv').config()
 
 describe('Auth', function (){
     beforeEach(function (){
@@ -7,7 +8,9 @@ describe('Auth', function (){
     });
 
     it('successful log in', function (){
-        LoginPage.login('muraways@gmail.com', 'Nfy.irf1990');
+        const email = Cypress.env('EMAIL')
+        const password = Cypress.env('PASSWORD')
+        LoginPage.login(email, password);
         ProfilePage.iconAvatar.should('be.visible')
     })
 

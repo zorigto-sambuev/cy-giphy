@@ -3,8 +3,8 @@ import Page from "./page";
 class LoginPage extends Page {
     get inputEmail () { return cy.get('input[type="email"]') }
     get inputPassword () { return cy.get('input[type="password"]') }
-    get buttonLogIn () { return cy.get('.form-components__CTAButton-sc-98e1s3-3')}
-    get notification () { return cy.get('.flash-message__Text-sc-1cn8h5f-2')}
+    get buttonLogIn () { return cy.get('body > div.sc-8d8c1c0a-0.cagddh > div > form > button')}
+    get notification () { return cy.get('body > div.sc-9124df2e-0.etvfMo.fixed.left-0.right-0.top-0 > div')}
     get emailValidation() { return cy.get('.dropdown__DropdownContainer-sc-w5qxqu-0') }
     get passwordValidation() { return cy.get('.dropdown__DropdownContainer-sc-w5qxqu-0') }
 
